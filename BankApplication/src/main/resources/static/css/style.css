@@ -1,0 +1,120 @@
+.bg-primary{
+	background-color:aquamarine;
+}
+
+.banner{
+	width:100%;
+	height:92vh;
+	background:url(../images/banner.jpg);
+	color:antiquewhite;
+	background-size:cover;
+}
+
+.my-card{
+	padding:20px;
+	background: aquamarine;
+	margin-top: 5%;
+}
+
+.my-card2{
+	padding:50px;
+	background-color: aquamarine;
+	margin-top: 15%;
+}
+
+.my-card3{
+	background:url(../images/adminLoginFormImage.jpg);
+	background-color: antiquewhite;
+	background-size:cover;
+}
+
+.my-card4{
+	background:url(../images/customerLoginFormImage.jpg);
+	background-color: antiquewhite;
+	background-size:cover;
+}
+
+.dashboard-background{
+	background: antiquewhite;
+}
+
+.sidebar{
+	position:fixed;
+	width:18%;
+	height: 100%;
+	background:wheat;
+}
+
+.content{
+	margin-left: 20%;
+}
+
+@media only screen and (max-width:600px){
+	.sidebar{
+		display: none;
+		width:80% !important;
+		background: wheat;
+		height: 100vh;
+		position: fixed;
+		padding-top: 20px;
+		z-index: 999999999999;
+	}
+	
+	.content{
+		margin-left: 0% !important;
+	}
+}
+
+.sidebar a{
+	display: block;
+	text-decoration: none;
+	width: 100%;
+	padding: 10px 25px;
+	color:gray;
+}
+.sidebar a:hover{
+	background: navajowhite;
+}
+
+.my_profile_picture{
+	width:35px;
+	height:35px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+
+.my_profile_picture2{
+	width:135px;
+	height:135px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid black;
+}
+.email_class{
+	color: blue;
+}
+
+.message_danger{
+	background-color: red;
+	color: white;
+}
+
+.search-container{
+	
+	position:relative;
+}
+
+.search-result{
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid black;
+	display: none;
+}
+
+.activate{
+	background:dodgerblue;
+	color:white!important;
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{baseDashboardCustomers::layout(~{::section})}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title th:text="${title}"></title>
+  </head>
+  <body>
+	  
+	      <div th:replace="${content}"></div>
+	
+    
+    <section >
+	
+			<div class="card mr-3 ml-3">
+			<div class="card-body">
+				<h2 class="text-center"> Your Balance </h2>
+				<br>
+				
+				<!--<div class="search-container my-3">
+					<input onkeyup="search()"
+					       type="text"
+					       id="search-input" 
+					       class="form-control"
+					       placeholder="Search customers">
+					       
+					       <div class="search-result">
+							   
+						   </div>
+					
+					
+				</div>
+				<br>-->
+		
+		<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">A/C No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Balance (Rs)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="c:${customer}">
+      <th scope="row" th:text="${c.accountNo}"></th>
+      <td>
+		  <span th:text="${c.name}"></span></td>
+      <td> <a ><span th:text="${c.username}"></span></a> </td>
+      <td> <a ><span th:text="${c.balance}"></span></a> </td>
+     <!-- <td>
+		  <form method="post" th:action="@{'/licagent/addCustomerPolicy/'+${c.cId}}"> <button class="btn btn-primary " type="submit">Add policy</button> </form>
+		  <a th:href="@{'/licagent/view_all_customerPolicies/'+${c.cId}}"><button class="btn btn-success mt-2"> View Policies </button></a>
+	  </td>
+      <td> <a th:href="@{'/licagent/deleteCustomer/'+${c.cId}}"><button class="btn btn-danger"> Delete </button></a>
+      <form method="post" th:action="@{'/licagent/updateCustomer/'+${c.cId}}"> <button class="btn btn-primary mt-2" type="submit">Update</button> </form></td>-->
+    </tr>
+   
+  </tbody>
+</table>
+
+    </div>
+    </div>
+    <script>
+		
+		$(document).ready(()=>{
+			
+			$(".nav-link active").removeClass("activate");
+			$("#view_customers-link").addClass("activate");
+		});
+		
+	</script>
+	<!--th:href="@{'/user/'+${c.cId}+'/contact_details'}"-->
+    
+    </section>
+    </body>
+    </html>
